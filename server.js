@@ -65,14 +65,13 @@ app.listen(3000, ()=>{
 
 // ##Create a new repository on the command line
 
-// touch README.md
 // git init
 // git add README.md
 // git commit -m "first commit"
-// git remote add origin git@github.com:alexpchin/<reponame>.git
-// git push -u origin master
-// ##Push an existing repository from the command line
 
-// git remote add origin git@github.com:alexpchin/<reponame>.git
-// git push -u origin master
 
+// git remote remove origin
+// remote -v   
+// git branch -M main  
+// git remote add origin https://github.com/Banshikabadkul/Hotels.git
+// git push -u origin main
