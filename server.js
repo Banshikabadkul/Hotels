@@ -1,46 +1,8 @@
-// console.log("Server file is running");
-
-// // function callback(){
-// //   console.log('Function is completed successfully');
-// // }
-
-// const add = function(a,b,prince){
-//   var res = a+b;
-//   console.log('result : ' + res);
-//   prince();
-// }
-
-// add(232,3434,()=>{
-//   console.log('Function is completed successfully');
-// });
-
-// var os = require('os');
-// var fs = require('fs');
-
-// var user = os.userInfo();
-// console.log(user);
-
-// fs.appendFile('greeting.txt', 'Hi ' + user.username + '!', ()=>{
-//   console.log('File is created.');
-// });
-
-//---------------------------------------------------------------------------
-
-// console.log("Server.js is running..");
-
-// const notes = require('./notes.js');
-
-// var age = notes.age;
-
-// var addNum = notes.addNum(age+12, 342);  
-// console.log(addNum);
-// console.log(age);
 
 const express = require('express');
 const app = express();
 const db = require('./db');
-const Person = require('./models/Person');
-const MenuItem = require('./models/MenuItem');
+require("dotenv").config();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -58,8 +20,8 @@ const menuItemRoutes = require('./routes/menuItemRoutes');
 app.use('/person',personRoutes);
 app.use("/menu", menuItemRoutes);
 
-
-app.listen(3000, ()=>{
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, ()=>{
   console.log('Listening on port 3000');
 })
 

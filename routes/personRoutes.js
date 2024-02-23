@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Person = require('./../models/Person');
+const Person = require("./../models/Person");
 
 // to send data to server and save in db---------we use post method---------------
 router.post("/", async (req, res) => {
